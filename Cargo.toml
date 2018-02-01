@@ -1,0 +1,6 @@
+[package]
+name = "opencm"
+version = "0.1.0"
+authors = ["Andrey Tkachenko <andreytkachenko64@gmail.com>"]
+
+[dependencies]
