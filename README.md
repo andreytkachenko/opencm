@@ -1,6 +1,6 @@
 # Rust OpenCM Port
 
-## What Ported?
+## What Have Ported?
 1. Timers
 2. GPIO
 3. EXTI
