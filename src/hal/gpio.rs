@@ -98,7 +98,6 @@ pub struct Registers {
     pub afrh:    VolatileCell<u32>
 }
 
-
 #[derive(Copy, Clone, PartialEq, Eq)]
 pub struct Gpio {
     regs: *const Registers
@@ -200,12 +199,11 @@ impl Gpio {
     }
 }
 
-
 #[derive(Debug, Copy, Clone)]
 pub enum PuPdMode {
-    Up,
-    Down,
-    None,
+    None = 0x0,
+    Up   = 0x1,
+    Down = 0x2,
 }
 
 #[derive(Debug, Copy, Clone)]

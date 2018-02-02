@@ -49,12 +49,12 @@ impl<T: Radix> VolatileCell<T> {
 
     pub fn mask_set(&self, mask: T, shift: T, val: T) {
         let mut reg = self.get();
-        reg = (reg & !mask) | (val << shift);
+        reg = (reg & !(mask << shift)) | (val << shift);
         self.set(reg);
     }
 
     pub fn mask_get(&self, mask: T, shift: T) -> T {
-        (self.get() & !mask) >> shift
+        (self.get() & !(mask << shift)) >> shift
     }
 
     pub fn test(&self, val: T) -> bool {

@@ -57,6 +57,11 @@ pub fn disable(mask: u32) {
     EXTI.emr.uncheck(mask);
 }
 
+pub fn trigger_off(mask: u32) {
+    EXTI.ftsr.uncheck(mask);
+    EXTI.rtsr.uncheck(mask);
+}
+
 pub fn trigger_on_rising(mask: u32) {
     EXTI.ftsr.uncheck(mask);
     EXTI.rtsr.check(mask);

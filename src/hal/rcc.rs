@@ -132,7 +132,7 @@ pub fn enable(perph: Peripheral) {
     let reg: &Registers = unsafe { &*(RCC_BASE as *const Registers) };
 
     let p = perph as u32;
-	let bit = (p & 0xFF) as u32;
+	let bit = 1u32 << (p & 0xFF) as u32;
 	let bus = (p >> 8) & 0xFF;
 
 	match bus {
