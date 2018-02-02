@@ -7,3 +7,4 @@ pub mod uart;
 pub mod syscfg;
 pub mod pwr;
 pub mod timer;
+pub mod spi;

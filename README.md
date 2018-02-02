@@ -10,4 +10,5 @@
 7. NVIC (not full)
 8. SYSCFG (not full)
 9. FLASH
+10. SPI (not tested)
 
